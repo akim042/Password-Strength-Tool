@@ -16,15 +16,15 @@ def check_password_strength(password):
 
     # Determine strength message
     if score == 5:
-        strength = "Very Strong ✅"
+        strength = "5/5 - Very Strong"
     elif score == 4:
-        strength = "Strong 👍"
+        strength = "4/5 - Strong"
     elif score == 3:
-        strength = "Medium ⚠️"
+        strength = "3/5 Medium"
     elif score == 2:
-        strength = "Weak ❌"
+        strength = "2/5 Weak"
     else:
-        strength = "Very Weak ❌"
+        strength = "1/5 Very Weak"
 
     return score, strength
 
