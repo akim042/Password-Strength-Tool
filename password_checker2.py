@@ -32,14 +32,14 @@ def check_password(password):
     entropy = calculate_entropy(password)
     print(f"Entropy: {entropy:.2f} bits")
     if entropy < 50:
-        print("! Password entropy is low; consider making it longer or more complex.")
+        print("!! Password entropy is low; consider making it longer or more complex.")
 
     # Pattern detection
     if re.search(r"(.)\1{2,}", password):
-        print("! Password has repeated characters!")
+        print("!!! Password has repeated characters!")
     if re.search(r"(0123|1234|abcd|qwerty)", password.lower()):
-        print("! Password contains a common pattern!")
+        print("!! Password contains a common pattern!")
 
-    if __name__ == "__main__":
-        pwd = input("Enter a password to check: ")
-        check_password(pwd)
+if __name__ == "__main__":
+    pwd = input("Enter a password to check: ")
+    check_password(pwd)
